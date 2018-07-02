@@ -14,5 +14,8 @@ export class AuthService {
   signup(user:User) {
     return this.http.post('/api/users',user)
   }
-
+  
+  signin(user:User){
+    return this.http.post('/api/users/signin',user)
+  }
 }

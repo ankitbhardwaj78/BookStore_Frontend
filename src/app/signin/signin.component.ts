@@ -41,4 +41,14 @@ export class SigninComponent implements OnInit {
           password: new FormControl(null, Validators.required)
       });
   }
+  
+  logout(){
+    console.log("in logout");
+    
+    this.authService.logout().subscribe(data =>{
+      console.log(data);
+      
+    })
+  }
+   
 }

@@ -1,11 +1,21 @@
 {
     "/api/users": {
-        "target": "http://localhost:3001",
+        "target": "http://localhost:3000",
         "secure": false,
         "changeOrigin": true
     },
     "/api/users/signin": {
-        "target": "http://localhost:3001",
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/api/users/logout": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/api/users/isloggedin": {
+        "target": "http://localhost:3000",
         "secure": false,
         "changeOrigin": true
     }

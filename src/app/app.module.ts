@@ -6,12 +6,14 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthService } from './auth.service';
 import { HttpModule } from "@angular/http";
+import { AddlistingComponent } from './addlisting/addlisting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    AddlistingComponent
   ],
   imports: [
     BrowserModule,

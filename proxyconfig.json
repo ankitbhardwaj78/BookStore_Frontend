@@ -18,5 +18,15 @@
         "target": "http://localhost:3000",
         "secure": false,
         "changeOrigin": true
+    },
+    "/api/listings/add": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/api/listings": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
     }
 }

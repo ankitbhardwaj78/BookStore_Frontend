@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AuthService } from './auth.service';
 import { HttpModule } from "@angular/http";
 import { AddlistingComponent } from './addlisting/addlisting.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AddlistingComponent } from './addlisting/addlisting.component';
   imports: [
     BrowserModule,
     FormsModule,
+    routing,
     ReactiveFormsModule,
     HttpModule
   ],

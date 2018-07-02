@@ -18,4 +18,13 @@ export class AuthService {
   signin(user:User){
     return this.http.post('/api/users/signin',user)
   }
+  
+  logout(){
+    return this.http.get('/api/users/logout')
+  }
+
+  isloggedin(){
+    return this.http.get('/api/users/isloggedin')
+  }
+   
 }

@@ -8,13 +8,15 @@ import { AuthService } from './auth.service';
 import { HttpModule } from "@angular/http";
 import { AddlistingComponent } from './addlisting/addlisting.component';
 import { routing } from './app.routing';
+import { ListingComponent } from './listing/listing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
-    AddlistingComponent
+    AddlistingComponent,
+    ListingComponent
   ],
   imports: [
     BrowserModule,

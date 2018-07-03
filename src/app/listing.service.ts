@@ -8,9 +8,9 @@ export class ListingService {
 
   constructor(private http: Http) { }
 
-  addlisting(listing){
+  addlisting(formdata){
     console.log("in add");
     
-    return this.http.post('/api/listings/add',listing);
+    return this.http.post('/api/listings/add',formdata);
   }
 }

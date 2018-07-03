@@ -6,17 +6,18 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthService } from './auth.service';
 import { HttpModule } from "@angular/http";
+import { ListingComponent } from './listing/listing.component';
 import { AddlistingComponent } from './addlisting/addlisting.component';
 import { routing } from './app.routing';
-import { ListingComponent } from './listing/listing.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
-    AddlistingComponent,
-    ListingComponent
+    ListingComponent,
+    AddlistingComponent
   ],
   imports: [
     BrowserModule,

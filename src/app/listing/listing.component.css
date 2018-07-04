@@ -12,9 +12,8 @@ body {
 	background:#fff;
 }
 #header{
-	height:92px; 
-	background:#fff url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/header-icons.png") 1448px -2px no-repeat;
-	border-bottom:1px solid #eee;
+    height:92px; 
+    	border-bottom:1px solid #eee;
 }
 #header ul{padding:33px 0 0 45px;}
 #header li{
@@ -811,7 +810,7 @@ body.MakeFloatingCart div.cart-icon-bottom{z-index:300;}
 #info{
 	position: absolute;
 	top: 20px;
-	left: 676px;
+    right: 0px;
 	text-align: center;
 	width: 413px;
 

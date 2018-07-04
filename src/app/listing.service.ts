@@ -13,4 +13,8 @@ export class ListingService {
     
     return this.http.post('/api/listings/add',formdata);
   }
+
+  getlisting(){
+    return this.http.get('/api/listings');
+  }
 }

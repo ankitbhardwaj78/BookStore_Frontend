@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
+import { ListingService } from '../listing.service';
+import { Listing } from '../listing.model';
 
 @Component({
   selector: 'app-listing',
@@ -8,9 +10,18 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class ListingComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute,private route: Router) { }
+  listings:any[] =[];
+
+  constructor(private router: ActivatedRoute,private route: Router,private listingservice: ListingService) { }
 
   ngOnInit() {
+      this.listingservice.getlisting()
+      .subscribe(data => {
+        console.log(data["_body"]);
+        this.listings = JSON.parse(data["_body"])   
+        console.log(this.listings);
+             
+      })
   }
 
   addlisting() {

@@ -1,73 +1,105 @@
 <div class="container">
-    <!--     SIDE AREA -->
-        <div class="sideArea">
-            <div class="avatar">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
-                <div class="avatarName">Welcome,<br>John Doe</div>
-            </div>
-            <ul class="sideMenu">
-                <li><a href="javascript:void(0)" class="has-submenu"><span class="fa fa-table"></span>PRODUCT</a>
-                    <ul class="submenu">
-                        <li><a href="index.php?c=product&a=list01"><span class="fa fa-list"></span>Product List</a></li>
-                        <li><a href="index.php?c=product&a=list02"><span class="fa fa-tags"></span>Category List</a></li>
-                    </ul>
-                </li>
-                <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>MENU</a></li>
-                <li><a href="invoice_list.php"><span class="fa fa-money"></span>INVOICE</a></li>
-                <li><a href="user_list.php"><span class="fa fa-user-o"></span>USER</a></li>
-                <li><a href="contact_list.php"><span class="fa fa-envelope-o"></span>CONTACT</a></li>
-            </ul>
+  <!--     SIDE AREA -->
+  <div class="sideArea">
+    <div class="avatar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
+      <div class="avatarName">Welcome,
+        <br>John Doe</div>
+    </div>
+    <ul class="sideMenu">
+      <li>
+        <a href="javascript:void(0)" class="has-submenu">
+          <span class="fa fa-table"></span>PRODUCT</a>
+        <ul class="submenu">
+          <li>
+            <a href="index.php?c=product&a=list01">
+              <span class="fa fa-list"></span>Product List</a>
+          </li>
+          <li>
+            <a href="index.php?c=product&a=list02">
+              <span class="fa fa-tags"></span>Category List</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="menu_list.php">
+          <span class="fa fa-sitemap"></span>MENU</a>
+      </li>
+      <li>
+        <a href="invoice_list.php">
+          <span class="fa fa-money"></span>INVOICE</a>
+      </li>
+      <li>
+        <a href="user_list.php">
+          <span class="fa fa-user-o"></span>USER</a>
+      </li>
+      <li>
+        <a href="contact_list.php">
+          <span class="fa fa-envelope-o"></span>CONTACT</a>
+      </li>
+    </ul>
+  </div>
+  <!--     SIDE AREA -->
+  <div class="mainArea">
+    <!-- BEGIN NAV -->
+    <nav class="navTop row">
+      <div class="menuIcon fl">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="account fr">
+        <div class="name has-submenu">John Doe
+          <span class="fa fa-angle-down"></span>
         </div>
-    <!--     SIDE AREA -->
-        <div class="mainArea">
-            <!-- BEGIN NAV -->
-            <nav class="navTop row">
-                <div class="menuIcon fl"><i class="fas fa-bars"></i></div>
-                <div class="account fr">
-                    <div class="name has-submenu">John Doe<span class="fa fa-angle-down"></span></div>
-                    <ul class="accountLinks submenu">
-                        <li><a href="">View website</a></li>
-                        <li><a href="">Log out<span class="fa fa-sign-out fr"></span></a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- END NAV -->
-            <!-- CONTAINER  -->
-            <div class="mainContent">  
-    <!-- LIST FORM -->
-    <div class="row filterGroup">
+        <ul class="accountLinks submenu">
+          <li>
+            <a href="">View website</a>
+          </li>
+          <li>
+            <a href="">Log out
+              <span class="fa fa-sign-out fr"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END NAV -->
+    <!-- CONTAINER  -->
+    <div class="mainContent">
+      <!-- LIST FORM -->
+      <div class="row filterGroup">
         <form action="" method="POST" class="formSearch fl">
-            <input type="text" class="inputSearch" placeholder="Search">
-            <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
+          <input type="text" class="inputSearch" placeholder="Search">
+          <button type="submit" class="btnSearch">
+            <i class="fa fa-search"></i>
+          </button>
         </form>
         <div class="areaFilter fr row">
-            <div class="boxSelect fr">
-                <div class="titleSelect">Sort by</div>
-                <ul class="optionSelect">
-                    <li sortIndex="0"><a href="">Alphabet</a></li>
-                    <li sortIndex="1"><a href="">Price, Ascending</a></li>
-                </ul>
-            </div>
+          <div class="boxSelect fr">
+            <div class="titleSelect">Sort by</div>
+            <ul class="optionSelect">
+              <li sortIndex="0">
+                <a href="">Alphabet</a>
+              </li>
+              <li sortIndex="1">
+                <a href="">Price, Ascending</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-   
-              
-    <!-- CATE LIST    -->
-    <form action="" method="GET" name="listForm" class="form scrollX">
+      </div>
+
+
+      <!-- CATE LIST    -->
+      <form action="" method="GET" name="listForm" class="form scrollX">
         <div class="formHeader row">
-            <h2 class="text-1 fl">Product List</h2>
+          <h2 class="text-1 fl">Product List</h2>
         </div>
-    </form>  
-              
-  
-              
-    
-            </div>
-            <!-- END CONTAINER  -->
-        </div>
+      </form>
+
+
+
+
     </div>
-    
-    
-    
-    
-  
+    <!-- END CONTAINER  -->
+  </div>
+</div>

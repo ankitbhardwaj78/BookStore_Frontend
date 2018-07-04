@@ -9,6 +9,7 @@ import { HttpModule } from "@angular/http";
 import { ListingComponent } from './listing/listing.component';
 import { AddlistingComponent } from './addlisting/addlisting.component';
 import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { routing } from './app.routing';
     SigninComponent,
     SignupComponent,
     ListingComponent,
-    AddlistingComponent
+    AddlistingComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

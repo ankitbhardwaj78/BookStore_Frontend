@@ -12,7 +12,7 @@ const APP_ROUTES: Routes = [
             { path: 'add', component: AddlistingComponent }
         ]
     }
-    // { path: 'auth', component: AuthenticationComponent, children: AUTH_ROUTES }
+   
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

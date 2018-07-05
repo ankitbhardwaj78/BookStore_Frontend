@@ -10,6 +10,7 @@ import { ListingComponent } from './listing/listing.component';
 import { AddlistingComponent } from './addlisting/addlisting.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { DisplaylistingComponent } from './displaylisting/displaylisting.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     ListingComponent,
     AddlistingComponent,
-    HomeComponent
+    HomeComponent,
+    DisplaylistingComponent
   ],
   imports: [
     BrowserModule,

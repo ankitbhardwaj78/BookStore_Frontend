@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-offset-2">
+<!-- <div class="col-md-8 col-md-offset-2">
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
           <label for="name">Name</label>
@@ -54,3 +54,169 @@
               [disabled]="!myForm.valid">Submit</button>
   </form>
 </div>
+ -->
+
+
+
+
+
+
+
+ <div class="signup__container">
+                <div class="container__child signup__thumbnail">
+                  <div class="thumbnail__logo">
+                    <h1 class="logo__text">Spectre</h1>
+                  </div>
+                  <div class="thumbnail__content text-center">
+                    <h1 class="heading--primary">Welcome to MI6.</h1>
+                    <h2 class="heading--secondary">Are you ready to join the elite?</h2>
+                  </div>
+                  <div class="thumbnail__links">
+                    <!-- <ul class="list-inline m-b-0 text-center">
+                      <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
+                      <li><a href="https://www.behance.net/alexdevero" target="_blank"><fa class="fa fa-behance"></fa></a></li>
+                      <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
+                      <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    </ul> -->
+                  </div>
+                  <div class="signup__overlay"></div>
+                </div>
+                <div class="container__child signup__form">
+                  <form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input
+                                                        type="text"
+                                                        id="name"
+                                                        class="form-control"
+                                                        formControlName="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input
+                                                        type="email"
+                                                        id="email"
+                                                        class="form-control"
+                                                        formControlName="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input
+                                                        type="password"
+                                                        id="password"
+                                                        class="form-control"
+                                                        formControlName="password">
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="College">College</label>
+                                              <input
+                                                      type="text"
+                                                      id="college"
+                                                      class="form-control"
+                                                      formControlName="college">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <input
+                                                    type="text"
+                                                    id="address"
+                                                    class="form-control"
+                                                    formControlName="address">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="phoneNumber">Phone Number</label>
+                                            <input
+                                                    type="text"
+                                                    id="phoneNumber"
+                                                    class="form-control"
+                                                    formControlName="phoneNumber">
+                                          </div>
+                    <div class="m-t-lg">
+                      <ul class="list-inline">
+                        <li>
+                          <input class="btn btn--form" type="submit" value="Register" [disabled]="!myForm.valid"/>
+                        </li>
+                        <li>
+                          <a class="signup__link" href="#">I am already a member</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </form>  
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- FONT AWESOME -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+  <!-- css link -->
+
+  <!-- <title>sign-up</title>
+</head>
+<body>
+
+  <div class="box">
+
+    <div class="header">
+      <i class="fas fa-user-circle fa-5x"></i>
+      <h1 class="header-text">sign-up</h1>
+    </div>
+
+    <form class="signup-Form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+      <div class="email-input">
+        <input type="email" name="email" value="" placeholder="E-mail" formControlName="email">
+      </div>
+
+      <div class="email-input">
+         <input type="text" name="email" value="" placeholder="E-mail" formControlName="name">
+      </div>
+
+      <div class="email-input">
+        <input type="text" name="email" value="" placeholder="E-mail" formControlName="college">
+      </div>
+
+      <div class="email-input">
+        <input type="text" name="email" value="" placeholder="E-mail" formControlName="phonenumber">
+      </div>
+
+      <div class="email-input">
+                <input type="text" name="email" value="" placeholder="E-mail" formControlName="address">
+              </div>
+
+      <div class="password-input">
+        <input type="password" name="password" value="" placeholder="Password"  formControlName="password">
+      </div>
+
+      <div class="signup-btn">
+        <button type="submit" name="button"  [disabled]="!myForm.valid">sign-up</button>
+      </div>
+
+    </form>
+
+    <div class="choose">
+      <p>
+        Already have an account? <a href="/login">log-in here</a>
+      </p>
+      <p>
+        Or go <a href="/">Home</a>.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html> --> -->

@@ -506,18 +506,7 @@ strike {
 
 
 
-/* PAGE ADMIN CSS  */
-/*FONTS*/
-@font-face {
-    font-family: 'SFU Futura';
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SFU Futura';
-    font-weight: bold;
-    font-style: normal;
-}
+
 
 body {
     font-family: 'SFU Futura', Arial, sans-serif;
@@ -849,19 +838,19 @@ label {
     border-bottom: 1px solid #dedede;
 }
 .table .cell-50 {
-    -max-width: 50px;
+    max-width: 50px;
     min-width: 50px;
 }
 .table .cell-100 {
-    -max-width: 100px;
+    max-width: 100px;
     min-width: 100px;
 }
 .table .cell-150 {
-    -max-width: 150px;
+    max-width: 150px;
     min-width: 150px;
 }
 .table .cell-200 {
-    -max-width: 200px;
+    max-width: 200px;
     min-width: 200px;
 }
 .table .cell-100p {

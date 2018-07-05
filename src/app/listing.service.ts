@@ -19,10 +19,15 @@ export class ListingService {
   }
 
   filterByCondition(condition){
-    return this.http.post('/api/listings/filterByCondition',{condition})
+    return this.http.post('/api/listings/filterByCondition',{condition});
   }
 
   filterByPrice(from,to){
-    return this.http.post('/api/listings/filterByPrice',{from,to})
+    return this.http.post('/api/listings/filterByPrice',{from,to});
   }
+  
+  search(query){
+    return this.http.post('/api/listings/search',{query});
+  }
+
 }

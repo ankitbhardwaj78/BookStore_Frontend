@@ -3,8 +3,8 @@
   <!-- LIST FORM -->
   <div class="row filterGroup">
     <form  class="formSearch fl">
-      <input type="text" class="inputSearch" placeholder="Search">
-      <button type="submit" class="btnSearch">
+      <input type="text" class="inputSearch" placeholder="Search" #query>
+      <button type="submit" class="btnSearch" (click)="search(query.value)">
         <i class="fa fa-search"></i>
       </button>
     </form>

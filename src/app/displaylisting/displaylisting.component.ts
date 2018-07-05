@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListingService } from '../listing.service';
+import { query } from '@angular/core/src/render3/query';
 
 @Component({
   selector: 'app-displaylisting',
@@ -36,32 +37,43 @@ export class DisplaylistingComponent implements OnInit {
   sortByCondition() {
     //console.log(this.priority["New"]);
     for (let i = 0; i < this.listings.length; i++) {
-      for (let j = i+1; j < this.listings.length ; j++) {
+      for (let j = i + 1; j < this.listings.length; j++) {
         if (this.priority[this.listings[i].condition] < this.priority[this.listings[j].condition]) {
           let temp = this.listings[j];
-          this.listings[j]= this.listings[i];
+          this.listings[j] = this.listings[i];
           this.listings[i] = temp;
         }
-       // console.log(this.priority[this.listings[j + 1].condition]);
+        // console.log(this.priority[this.listings[j + 1].condition]);
       }
     }
     console.log(this.listings);
   }
 
-  filterByCondition(condition){
-     this.listingservice.filterByCondition(condition)
-     .subscribe(data=>{
-       console.log(data);
-       this.listings = JSON.parse(data["_body"])
-     })
+  filterByCondition(condition) {
+    this.listingservice.filterByCondition(condition)
+      .subscribe(data => {
+        console.log(data);
+        this.listings = JSON.parse(data["_body"])
+      })
   }
 
-  filterByPrice(from,to){
-    this.listingservice.filterByPrice(from,to)
-    .subscribe(data=>{
-      console.log(data);
-      this.listings = JSON.parse(data["_body"])
-    })
- }
- 
+  filterByPrice(from, to) {
+    this.listingservice.filterByPrice(from, to)
+      .subscribe(data => {
+        console.log(data);
+        this.listings = JSON.parse(data["_body"])
+      })
+  }
+
+
+  search(query) {
+    this.listingservice.search(query)
+      .subscribe(data => {
+        console.log(data);
+
+        this.listings = JSON.parse(data["_body"])
+      })
+
+  }
+
 }

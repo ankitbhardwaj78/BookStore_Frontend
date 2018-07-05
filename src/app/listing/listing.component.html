@@ -8,34 +8,24 @@
     </div>
     <ul class="sideMenu">
       <li>
-        <a href="/listing" class="has-submenu">
+        <a (click) = "displayListingPage()">
           <span class="fa fa-table"></span>PRODUCT</a>
-        <!-- <ul class="submenu">
-          <li>
-            <a href="index.php?c=product&a=list01">
-              <span class="fa fa-list"></span>Product List</a>
-          </li>
-          <li>
-            <a href="index.php?c=product&a=list02">
-              <span class="fa fa-tags"></span>Category List</a>
-          </li>
-        </ul> -->
       </li>
       <li>
         <a href="menu_list.php">
-          <span class="fa fa-sitemap"></span>MENU</a>
+            <i class="fas fa-clipboard-list fa-lg"></i> YOUR WISHLIST</a>
       </li>
       <li>
-        <a href="invoice_list.php">
-          <span class="fa fa-money"></span>INVOICE</a>
+        <a (click) = "addListingPage()">
+            <i class="fas fa-book fa-lg"></i> SELL YOUR BOOK</a>
       </li>
       <li>
         <a href="user_list.php">
-          <span class="fa fa-user-o"></span>USER</a>
+            <i class="fas fa-comment fa-lg"></i> MESSAGES</a>
       </li>
       <li>
-        <a href="contact_list.php">
-          <span class="fa fa-envelope-o"></span>CONTACT</a>
+        <a (click)="logout()">
+            <i class="fas fa-sign-out-alt fa-lg"></i> LOG OUT</a>
       </li>
     </ul>
   </div>

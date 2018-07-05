@@ -696,6 +696,7 @@ label {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .sideArea li>a:hover {
+    cursor: pointer;
     background: rgba(255,255,255,0.1);
 }
 .sideArea li>a>.fa {

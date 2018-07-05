@@ -11,6 +11,7 @@ import { AddlistingComponent } from './addlisting/addlisting.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { DisplaylistingComponent } from './displaylisting/displaylisting.component';
+import { BookdetailComponent } from './bookdetail/bookdetail.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DisplaylistingComponent } from './displaylisting/displaylisting.compone
     ListingComponent,
     AddlistingComponent,
     HomeComponent,
-    DisplaylistingComponent
+    DisplaylistingComponent,
+    BookdetailComponent
   ],
   imports: [
     BrowserModule,

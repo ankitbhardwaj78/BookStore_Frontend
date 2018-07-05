@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListingService } from '../listing.service';
 
 @Component({
   selector: 'app-displaylisting',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplaylistingComponent implements OnInit {
 
-  constructor() { }
+  
+  listings:any[] =[];
+
+  constructor(private listingservice: ListingService) { }
 
   ngOnInit() {
+    this.listingservice.getlisting()
+    .subscribe(data => {
+      console.log(data["_body"]);
+      this.listings = JSON.parse(data["_body"])   
+      console.log(this.listings);      
+    })
   }
 
 }

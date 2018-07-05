@@ -1,3 +1,63 @@
-<p>
-  displaylisting works!
-</p>
+<!-- CONTAINER  -->
+<div class="mainContent">
+  <!-- LIST FORM -->
+  <div class="row filterGroup">
+    <form action="" method="POST" class="formSearch fl">
+      <input type="text" class="inputSearch" placeholder="Search">
+      <button type="submit" class="btnSearch">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+    <div class="areaFilter fr row">
+      <div class="boxSelect fr">
+        <div class="titleSelect">Sort by</div>
+        <ul class="optionSelect">
+          <li sortIndex="0">
+            <a href="">Alphabet</a>
+          </li>
+          <li sortIndex="1">
+            <a href="">Price, Ascending</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CATE LIST    -->
+  <form action="" method="GET" name="listForm" class="form scrollX">
+    <div class="formHeader row">
+      <h2 class="text-1 fl">Product List</h2>
+    </div>
+  </form>
+
+
+  <!-- listing card -->
+  <div class="row" style="background-color: #eaebee">
+    <div class="box-wrapper column" *ngFor="let listing of listings" style="margin-top: 5%;">
+      <img src="http://localhost:3000/{{listing.image}}" alt="rhcp" height="200px" width="100%" />
+      <div class="box-content">
+        <a class="buy" href="javascript:void(0)">
+          <span>
+            <i class="fa fa-cart-plus"></i>
+          </span>
+        </a>
+        <div class="title">{{listing.bookname}}</div>
+        <div class="desc">{{listing.authorname}}</div>
+        <span class="price">{{listing.price}}$</span>
+        <div class="footer">
+          <ul>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star-o"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="success"></div>
+    </div>
+
+  </div>
+
+</div>

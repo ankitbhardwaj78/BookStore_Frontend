@@ -22,4 +22,15 @@ export class DisplaylistingComponent implements OnInit {
     })
   }
 
+  sortbyprice(){
+    console.log("in sort");
+    
+    this.listings.sort(function(x, y){
+      return Number(x.price) - Number(y.price);
+    })
+    console.log(this.listings);
+    
+    
+  }
+
 }

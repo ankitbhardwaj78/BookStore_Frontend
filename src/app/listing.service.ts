@@ -17,4 +17,12 @@ export class ListingService {
   getlisting(){
     return this.http.get('/api/listings');
   }
+
+  filterByCondition(condition){
+    return this.http.post('/api/listings/filterByCondition',{condition})
+  }
+
+  filterByPrice(from,to){
+    return this.http.post('/api/listings/filterByPrice',{from,to})
+  }
 }

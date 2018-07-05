@@ -28,5 +28,20 @@
         "target": "http://localhost:3000",
         "secure": false,
         "changeOrigin": true
+    },
+    "/api/listings/search": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/api/listings/filterByCondition": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/api/listings/filterByPrice": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
     }
 }

@@ -48,9 +48,20 @@ export class DisplaylistingComponent implements OnInit {
     console.log(this.listings);
   }
 
-  filter(form,to,condition){
- console.log(form,to,condition);
- 
+  filterByCondition(condition){
+     this.listingservice.filterByCondition(condition)
+     .subscribe(data=>{
+       console.log(data);
+       this.listings = JSON.parse(data["_body"])
+     })
   }
 
+  filterByPrice(from,to){
+    this.listingservice.filterByPrice(from,to)
+    .subscribe(data=>{
+      console.log(data);
+      this.listings = JSON.parse(data["_body"])
+    })
+ }
+ 
 }

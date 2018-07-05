@@ -26,21 +26,22 @@
         <div class="btnFilter"><span class="fa fa-close"></span>Close</div>
   <!--             GROUP -->
         <div class="groupInput">
-            <p>By Condition</p><br>
+            <p><b>By Condition</b></p><br>
             <select name="Condition" #condition>
                 <option value="New">New</option>
                 <option value="Almost new">Almost new</option>
                 <option value="Slight damge">Slight damage</option>
                 <option value="Worn">Worn</option>
             </select> 
-            <p class="titleInput">By Price</p> 
+            <button (click)="filterByCondition(condition.value)">Filter</button><br><br>
+            <p class="titleInput"><b>By Price</b></p> 
             <div class="areaValue">
                 <p>From</p>
                 <input type="text" class="rangeValue" #from>
                 <p>To</p>
-                <input type="text" class="rangeValue" #to>
+                <input type="text" class="rangeValue" #to><br>
             </div>
-            <button (click)="filter(from.value,to.value,condition.value)"></button>
+            <button (click)="filterByPrice(from.value,to.value)">Filter</button>
         </div>
   </div>            
 

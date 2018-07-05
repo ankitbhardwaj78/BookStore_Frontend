@@ -21,8 +21,28 @@
         </ul>
       </div>
     </div>
-  </div>
-
+    <div class="btnFilter fr bg-fff"><span class="fa fa-filter"></span>Filter</div>
+    <div class="boxFilter">
+        <div class="btnFilter"><span class="fa fa-close"></span>Close</div>
+  <!--             GROUP -->
+        <div class="groupInput">
+            <p>By Condition</p><br>
+            <select name="Condition" #condition>
+                <option value="New">New</option>
+                <option value="Almost new">Almost new</option>
+                <option value="Slight damge">Slight damage</option>
+                <option value="Worn">Worn</option>
+            </select> 
+            <p class="titleInput">By Price</p> 
+            <div class="areaValue">
+                <p>From</p>
+                <input type="text" class="rangeValue" #from>
+                <p>To</p>
+                <input type="text" class="rangeValue" #to>
+            </div>
+            <button (click)="filter(from.value,to.value,condition.value)"></button>
+        </div>
+  </div>            
 
   <!-- CATE LIST    -->
   <form action="" method="GET" name="listForm" class="form scrollX">

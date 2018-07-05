@@ -1079,6 +1079,17 @@ label {
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 @import url(https://fonts.googleapis.com/css?family=Acme);
 
+#view_book{
+    background-color: #06D6A0;
+    border-radius: 50px;
+}
+
+#view_book:hover{
+    background-color: #fff;
+    color: #06D6A0;
+    font-weight: bold;
+}
+
 .box-wrapper {
   background-color: #fff;
   overflow: hidden;

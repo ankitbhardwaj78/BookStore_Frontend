@@ -10,7 +10,7 @@ import { Listing } from '../listing.model';
 })
 export class AddlistingComponent implements OnInit {
   myForm: FormGroup;
-  condition = ['new', 'almost new', 'not good']
+  condition = ['New', 'Almost new','Slight Damage' ,'Worn']
   selectedFile: File = null;
   fd = new FormData();
 

@@ -1,3 +1,32 @@
-<p>
-  wishlist works!
-</p>
+<div class="wrap cf">
+  <h1 class="projTitle">Wishlist</h1>
+  <div class="heading cf" style="display:flex;justify-content:space-between;">
+    <h1>Your Items</h1>
+    <button id="showshop" class="btn btn-danger" style="background-color: cadetblue">
+      Back
+    </button>
+  </div>
+  <h2 *ngIf="wishlist.length < 1">Your cat</h2>
+  <div class="cart" *ngIf="wishlist.length>0">
+    <ul class="cartWrap" id="cart_detail">
+      <li class="items odd" *ngFor="let item of wishlist">
+        <div class="infoWrap">
+          <div class="cartSection">
+            <img src="http://localhost:3000/{{item.image}}" alt="" class="itemImg" />
+            <h3>{{item.bookname}}</h3>
+            <p class="itemNumber" style="font-size: 15px;">BY {{item.authorname}}</p>
+            <h4>{{item.price}} RS</h4>
+          </div>
+          <div class="prodTotal cartSection">
+            
+          </div>
+          <div class="cartSection removeWrap">
+              <button class="btn btn-danger" style="border-radius: 20px;">
+                  X
+                </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

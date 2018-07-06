@@ -11,4 +11,9 @@ export class WishlistService {
   addItem(product){
     return this.http.post('/api/wishlists',{product});
   }
+
+  getItem(){
+    return this.http.get('/api/wishlists');
+  }
+
 }

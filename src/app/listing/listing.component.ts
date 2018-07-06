@@ -12,7 +12,7 @@ import { AuthService } from '../auth.service';
 export class ListingComponent implements OnInit {
 
   listings: any[] = [];
-
+  currentUser:string=""
   constructor(private router: ActivatedRoute, 
      private route: Router,
      private listingservice: ListingService, 
@@ -25,6 +25,7 @@ export class ListingComponent implements OnInit {
         if (!JSON.parse(data["_body"]).done) {
           this.route.navigate(['/home']);
         }
+        this.currentUser=JSON.parse(data["_body"]).name
       })
 
     this.listingservice.getlisting()

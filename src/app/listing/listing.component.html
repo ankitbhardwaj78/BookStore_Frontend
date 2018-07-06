@@ -4,7 +4,7 @@
     <div class="avatar">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
       <div class="avatarName">Welcome,
-        <br>John Doe</div>
+        <br>{{currentUser}}</div>
     </div>
     <ul class="sideMenu">
       <li>
@@ -37,19 +37,9 @@
         <i class="fas fa-bars"></i>
       </div>
       <div class="account fr">
-        <div class="name has-submenu">John Doe
+        <div class="name has-submenu">{{currentUser}}
           <span class="fa fa-angle-down"></span>
         </div>
-        <ul class="accountLinks submenu">
-          <li>
-            <a href="">View website</a>
-          </li>
-          <li>
-            <a href="">Log out
-              <span class="fa fa-sign-out fr"></span>
-            </a>
-          </li>
-        </ul>
       </div>
     </nav>
     <!-- END NAV -->

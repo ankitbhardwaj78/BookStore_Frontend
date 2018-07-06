@@ -7,12 +7,6 @@
                   class="form-control"
                   formControlName="bookname" required>
       </div>
-      <div>
-          <label for="image">Image</label>
-          <input
-                  type="file"
-                  (change)="onFileSelected($event)" #image required>
-      </div>
       <div class="form-group">
           <label for="Authorname">Author Name</label>
           <input
@@ -33,6 +27,12 @@
             <option class="form-control" *ngFor="let pow of condition" [value]="pow" >{{pow}}</option>
         </select>
      </div>
+     <div>
+            <label for="image">Image</label>
+            <input
+                    type="file"
+                    (change)="onFileSelected($event)" #image required>
+        </div>
       <button
               class="btn btn-primary"
               type="submit"

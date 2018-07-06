@@ -14,6 +14,7 @@ import { DisplaylistingComponent } from './displaylisting/displaylisting.compone
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { MessageComponent } from './message/message.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     DisplaylistingComponent,
     BookdetailComponent,
     MessageComponent,
-    WishlistComponent
+    WishlistComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,

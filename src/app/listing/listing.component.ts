@@ -23,7 +23,7 @@ export class ListingComponent implements OnInit {
     this.auth.isloggedin()
       .subscribe(data => {
         if (!JSON.parse(data["_body"]).done) {
-          this.route.navigate(['']);
+          this.route.navigate(['/home']);
         }
       })
 
@@ -34,6 +34,8 @@ export class ListingComponent implements OnInit {
         console.log(this.listings);
 
       })
+
+     this.route.navigate(['/listing']);
   }
 
   addListingPage() {
@@ -49,7 +51,7 @@ export class ListingComponent implements OnInit {
   logout() {
     this.auth.logout()
       .subscribe(data => {
-        this.route.navigate(['']);
+        this.route.navigate(['/home']);
       })
   }
 

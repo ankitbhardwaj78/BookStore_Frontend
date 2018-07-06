@@ -18,8 +18,8 @@
     user-select: none;
   }
   .wrap{
-      width: 70%;
-      height: 700px;
+      width: 80%;
+      height: 800px;
       margin: 50px auto;
       border-radius: 20px;
       border: solid 8px #2c3033;
@@ -82,7 +82,7 @@
       transition: all .3s ease;
   }
   ol{
-    height: 550px;
+    height: 650px;
     overflow-y:scroll;
     
     }

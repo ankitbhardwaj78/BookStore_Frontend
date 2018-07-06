@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Montserrat:400,700|Roboto+Slab|Vollkorn:400,400i');
+
+body {
+  margin: 0;
+  font-size: 62.5%;
+  text-align: center;
+  min-width: 900px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  min-height: 100px;
+  background: linear-gradient(0deg, rgba(53,52,55,0.7), rgba(18,17,26,0.7));
+  z-index: 10;
+}
+
+.center-block {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 940px;
+  min-width: 900px;
+}
+
+.logo {
+  position: absolute;
+  top: 27px;
+  left: 0.85%;
+  font-size: 3.6em;
+  font-family: cookie;
+  text-decoration: none;
+  color: #fed136;
+  letter-spacing: 0.04em;
+}
+
+header ul {
+  position: absolute;
+  top: 32px;
+  right: 0.14%;
+}
+
+header li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+header li a {
+  font-family: montserrat;
+  font-size: 1.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  margin-left: 40px;
+  letter-spacing: -0.3px;
+}
+
+header li a:hover {
+  color: #fed136;
+  transition: 0.5s;
+}
+
+.home {
+  padding-top: 100px;
+  background: url('../../assets/home.webp') no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-blend-mode: hue;
+}
+
+.home p {
+  padding-top: 125px;
+  margin-bottom: 0;
+  font-family: vollkorn;
+  font-size: 4.5em;
+  font-style: italic;
+  line-height: 1.2em;
+  color: white;
+  letter-spacing: 0.45px;
+}
+
+h1 {
+  margin: 0 0 40px;
+  padding-top: 0.25em;
+  font-family: montserrat;
+  font-size: 7.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: -2.9px;
+}
+
+.button {
+  display: inline-block;
+  padding: 21px 49px;
+  margin-bottom: 161px;
+  font-family: montserrat;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #fed136;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fec136;
+  transition: 0.5s;
+}
+
+.button:active {
+  background-color: #feb136;
+  transition: 0.2s;
+}
+
+h2 {
+  margin: 110px 0 0;
+  font-family: montserrat;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -2.4px;
+  color: #222222;
+}
+
+.title p {
+  margin-top: 4px;
+  font-family: vollkorn;
+  font-size: 2em;
+  font-style: italic;
+  color: #777777;
+}
+
+/* В этом блоке у меня не получилось нормально подгрузить иконки из спрайта. Я не понял, как разместить фон по центру относительно нужной иконки. Из-за этого высота иконок получилась разная и блоки поехали. Сделал отдельным фиайлами, спрайты оставил для соцсетей */
+
+.services .center-block {
+  text-align: justify;
+}
+
+.services .center-block:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.services-item {
+  display: inline-block;
+  width: 30%;
+  margin-top: 54px;
+  padding: 0 5px 90px;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.icon-wrap {
+  display: inline-block;
+  padding: 13px;
+  width: 40px;
+  height: 40px;
+  border: #fed136 3px solid;
+  border-radius: 45px;
+}
+
+h3 {
+  font-family: montserrat;
+  font-size: 1.8em;
+  letter-spacing: -0.8px;
+  margin-bottom: 0;
+  color: #222222;
+}
+
+.services-item p {
+  margin-top: 10px;
+  font-family: roboto slab;
+  font-size: 1.4em;
+  color: #777777;
+  letter-spacing: -0.5px;
+  line-height: 1.5em;
+}
+
+.portfolio {
+  background-color: #f7f7f7;
+}
+
+/*Два селектора ниже делают сетку таким образом, чтобы между блоками было пустое пространство. Когда я сделал text-align:justify родительскому блоку, первый ряд выстроился с пространством, а второй прилип к левому краю. Я добавил псевдокласс after к родительскому блоку (так было в лекции) и все заработало. Почему оно заработало - я не понял */
+
+.portfolio .center-block {
+  text-align: justify;
+  padding-bottom: 113px;
+}
+
+.portfolio .center-block:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.title,
+.portfolio-item {
+  text-align: center;
+}
+
+.portfolio-item {
+  display: inline-block;
+  margin-top: 51px;
+  width: 31%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.portfolio-item h3 {
+  color: #333333;
+  margin: 23px 0 0;
+}
+
+.portfolio-item p {
+  font-family: vollkorn;
+  font-size: 1.7em;
+  color: #737373;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.about-item {
+  position: relative;
+  margin: 57px 0 68px 0;
+}
+
+.about ul {
+  list-style-type: none;
+  margin-bottom: 133px;
+}
+
+.about ul:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #f1f1f1;
+  top: 20%;
+  left: 50%;
+  bottom: 10%;
+}
+
+.about-item-text {
+  display: inline-block;
+  max-width: 32%;
+  padding: 0 40px 0 0;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.about li:nth-of-type(even) .about-item-text {
+  text-align: left;
+  padding: 0 0 0 35px;
+}
+
+.about h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: montserrat;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 4px 0 10px 0;
+  letter-spacing: -1.1px;
+  color: #222222;
+}
+
+/* В <p> текст не получилось настроить так, чтобы переносы совпадали с макетом. В ширине блока доходил до милионных долей писелей, но текст так и не встал*/
+
+.about-item-text p {
+  display: inline;
+  font-family: roboto slab;
+  font-size: 1.4em;
+  color: #777777;
+  letter-spacing: -0.5px;
+  line-height: 1.6em;
+}
+
+/* Я долго пытался сделать прямоугольные картинки из макета вписанными в скругленные границы без изменения пропорций - но ничего не получилось. Использовал background */
+
+.about-item-img-first {
+  background: url("https://i.lensdump.com/i/8TSsqc.jpg");
+}
+
+.about-item-img-second {
+  background: url("https://i.lensdump.com/i/8TS3YK.jpg");
+}
+
+.about-item-img-third {
+  background: url("https://i.lensdump.com/i/8TSXBD.jpg");
+}
+
+.about-item-img-first,
+.about-item-img-second,
+.about-item-img-third,
+.about-item-img-fourth {
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  height: 170px;
+  border: 7px #f1f1f1 solid;
+  border-radius: 50%;
+  top: -2px;
+  background-position: bottom center;
+}
+
+.about li:nth-of-type(odd) .image {
+  margin-right: 37%;
+}
+
+.about li:nth-of-type(even) .image {
+  margin-left: 27.8%;
+}
+
+.about-item-img-fourth {
+  background: url("https://i.lensdump.com/i/8TScI0.jpg");
+}
+
+.about li:last-child {
+  position: relative;
+  display: inline-block;
+  margin: 0 4.5% 0 0;
+  width: 170px;
+  height: 170px;
+  border: 7px #f1f1f1 solid;
+  border-radius: 50%;
+  background: #fed136;
+  top: 13px;
+}
+
+.about li:last-child h3 {
+  text-align: center;
+  padding: 19px 36px 0 32px;
+  color: white;
+  letter-spacing: -0.9px;
+  line-height: 1.45em;
+}
+
+.team {
+  background-color: #f7f7f7;
+}
+
+.team .title p {
+  margin-top: 10px;
+}
+
+.team-item {
+  display: inline-block;
+  width: 29.5%;
+  margin-top: 50px;
+}
+
+.team-item img {
+  max-width: 220px;
+  max-height: 220px;
+  border: 7px white solid;
+  border-radius: 50%;
+}
+
+.team-item p {
+  font-family: montserrat;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #222222;
+  letter-spacing: -0.6px;
+  margin-bottom: 0;
+}
+
+.team-item span,
+.team .center-block>p {
+  display: block;
+  font-family: roboto slab;
+  color: #777777;
+}
+
+.team-item>span {
+  margin: 2px 0 11px;
+  font-size: 1.4em;
+}
+
+.team .center-block>p {
+  font-size: 1.6em;
+  margin: 45px 150px 115px;
+  letter-spacing: -0.4px;
+  line-height: 1.5em;
+}
+
+.team-item a,
+footer .socmedia-wrap a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px #222222 solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 0 4px 0;
+}
+
+.twitter:hover {
+  background-color: #00aced;
+  border-style: none;
+  transition: 0.5s;
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+  border-style: none;
+  transition: 0.5s;
+}
+
+.pinterest:hover {
+  background-color: #cb2028;
+  border-style: none;
+  transition: 0.5s;
+}
+
+.google:hover {
+  background-color: #d95232;
+  border-style: none;
+  transition: 0.5s;
+}
+
+a span {
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Далее полный набор стилей спрайта */
+
+.facebook-still, .google-still, .pinterest-still, .twitter-still, .facebook-footer, .google-footer, .pinterest-footer, .twitter-footer {
+	background: url(https://i.lensdump.com/i/8TSm01.png) no-repeat;
+}
+
+.facebook-still {
+	background-position: -57px -10px;
+}
+
+.google-still {
+	background-position: -107px -10px;
+}
+
+.pinterest-still {
+	background-position: -160px -9px;
+}
+
+.twitter-still {
+	background-position: -8px -11px;
+}
+
+.facebook-still:hover {
+	background-position: -53px -51px ;
+  transition: 0.5s;
+}
+
+.google-still:hover {
+	background-position: -104px -54px ;
+  transition: 0.5s;
+}
+
+.pinterest-still:hover {
+	background-position: -156px -54px;
+  transition: 0.5s;
+}
+
+.twitter-still:hover {
+	background-position: -5px -55px ;
+  transition: 0.5s;
+}
+
+/* Стили спрайта закончились */
+
+.logos-links {
+  margin: 60px 0 58px;
+  padding: 0 65px 0px 60px;
+}
+
+.logos a {
+  display: inline-block;
+  margin: 0 18px;  
+  vertical-align: middle;
+}
+
+.contacts {
+  padding-top: 0px;
+  background: url(https://i.lensdump.com/i/8TSn0v.png) no-repeat;
+	background-position: 787px 118px;
+  background-color: #222222;
+}
+
+.contacts h2 {
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.form {
+  margin: 74px 0 31px;
+  text-align: left;
+}
+
+.form>div {
+  position: relative;
+  display: inline-block;
+  width: 48.4%;
+  vertical-align: top;
+}
+
+.field {
+  font-family: montserrat;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+  display: block;
+  border: 1px #cccccc solid;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 210px;
+}
+
+.personal {
+  margin-right: 2.7%;
+}
+
+.personal .field {
+  height: 50px;
+}
+
+.field:nth-of-type(n+2) {
+  margin-top: 30px;
+}
+
+.message .field {
+  padding-top: 15px;
+}
+
+.contacts .button {
+  margin: 30px 36.8% 86px;
+  border: none;
+}
+
+footer {
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  top: 20%;
+  font-family: montserrat;
+  font-size: 1.4em;
+  color: #555555;
+  letter-spacing: -0.3px;
+}
+
+footer .socmedia-wrap a {
+  margin: 19px 4px 28px;
+  background-color: #222222;
+  border: none;
+}
+
+.facebook-footer {
+	background-position: -52px -51px;
+}
+
+.google-footer {
+	background-position: -103px -54px;
+}
+
+.pinterest-footer {
+	background-position: -156px -53px;
+}
+
+.twitter-footer {
+	background-position: -4px -54px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fed136;
+}
+
+footer p a:hover {
+  color: #fec136;
+  transition: 0.5s;
+}

@@ -269,3 +269,122 @@ html, body {
     width: 100%;
   }
   }
+
+
+
+
+
+
+
+
+
+  body {
+    font-family: "Noto Sans", sans-serif;
+    text-rendering: optimizeLegibility;
+    color: #1F1F21;
+    background: linear-gradient(90deg, #2B2B2B, #4A4A4A);
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: hidden;
+  }
+  
+  .compose {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 320px;
+    height: 120px;
+    text-align: center;
+  }
+  .compose a {
+    font-size: 18px;
+    line-height: 18px;
+    color: #F7F7F7;
+    margin: 24px 0 0 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+    transform: translateZ(0);
+  }
+  .compose a:hover {
+    opacity: 1;
+  }
+  .compose a i.material-icons {
+    font-size: 40px;
+  }
+  
+  #modal {
+    box-sizing: border-box;
+    background: #F7F7F7;
+    color: #1F1F21;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    transition: top 0.4s ease-in-out;
+    transform: translateZ(0);
+    overflow: hidden;
+    min-width: 320px;
+    padding: 60px 20px 0 20px;
+    top: 100%;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+  }
+  #modal.open {
+    top: 120px;
+  }
+  #modal .modal_content {
+    overflow-y: auto;
+    height: 100%;
+  }
+  #modal i.closer {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  #modal input, #modal textarea {
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #8E8E93;
+    background: #F7F7F7;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    outline: none;
+    border: 1px solid #C7C7CC;
+  }
+  #modal input.half {
+    width: 50%;
+    float: left;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  #modal input.half:nth-child(2) {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 0;
+  }
+  #modal input.btn {
+    color: #F7F7F7;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    background: #4CD964;
+    border: 1px solid #4CD964;
+  }
+  #modal .clear {
+    clear: both;
+  }
+  #modal textarea {
+    min-height: 150px;
+  }
+
+  #modal input[type="submit"]:disabled {
+    background: #dddddd;
+}
+  

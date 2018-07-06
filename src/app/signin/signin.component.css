@@ -80,8 +80,8 @@ h1{
 
 .loginbox input[type="submit"]:hover {
     cursor: pointer;
-    background: #27ae60;
-    color: #fff;
+    /* background: #27ae60;
+    color: #fff; */
     
 }
 
@@ -101,6 +101,11 @@ h1{
     font-size: 14px;
     color: #fff;
     opacity: 0.4;
+}
+
+
+form input[type="submit"]:disabled {
+    background: #dddddd;
 }
 
 

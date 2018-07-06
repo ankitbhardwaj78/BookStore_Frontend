@@ -1,18 +1,20 @@
 <main class="container">
 
   <div class="wrapper">
-   
+
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
-      <a href=""><i class="material-icons">share</i></a>
+      <a href="">
+        <i class="material-icons">share</i>
+      </a>
       <img data-image="lightblue" src="" alt="">
       <img data-image="darkblue" src="" alt="">
       <img data-image="green" class="active" src="../../assets/home.webp" alt="">
       <img data-image="yellow" src="" alt="">
       <img data-image="purpple" src="" alt="">
     </div>
-   
-   
+
+
     <!-- Right Column -->
     <div class="right-column">
       <!-- Product Ratings and Price -->
@@ -27,10 +29,10 @@
         <h1>Nike Airmax</h1>
         <span>Woman's Running Shoes</span>
       </div>
-   
+
       <!-- Product Configuration -->
       <div class="product-configuration">
-   
+
         <!-- Product Color -->
         <div class="product-color">
           <span>Color</span>
@@ -38,45 +40,76 @@
           <div class="color-choose">
             <div>
               <input data-image="lightblue" type="radio" id="lightblue" name="color" value="lightblue">
-              <label for="lightblue"><span></span></label>
+              <label for="lightblue">
+                <span></span>
+              </label>
             </div>
             <div>
               <input data-image="darkblue" type="radio" id="darkblue" name="color" value="darkblue">
-              <label for="darkblue"><span></span></label>
+              <label for="darkblue">
+                <span></span>
+              </label>
             </div>
             <div>
               <input data-image="green" type="radio" id="green" name="color" value="green" checked>
-              <label for="green"><span></span></label>
+              <label for="green">
+                <span></span>
+              </label>
             </div>
             <div>
               <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow">
-              <label for="yellow"><span></span></label>
+              <label for="yellow">
+                <span></span>
+              </label>
             </div>
             <div>
               <input data-image="purpple" type="radio" id="purpple" name="color" value="purpple">
-              <label for="purpple"><span></span></label>
+              <label for="purpple">
+                <span></span>
+              </label>
             </div>
           </div>
         </div>
-   
+
         <!-- Size Configuration -->
         <div class="size-config">
           <span>Size</span>
           <hr>
           <div class="size">
-            <div class="inc button"><i class="material-icons">add</i></div>
-            <div id="size-wrapper">
-                <input type="text" name="" id="size" value="7">
+            <div class="inc button">
+              <i class="material-icons">add</i>
             </div>
-            <div class="dec button"><i class="material-icons">remove</i></div>
+            <div id="size-wrapper">
+              <input type="text" name="" id="size" value="7">
+            </div>
+            <div class="dec button">
+              <i class="material-icons">remove</i>
             </div>
           </div>
         </div>
-        <!-- Product Pricing -->
+      </div>
+      <!-- Product Pricing -->
       <div class="buttons">
-        <button>Add to cart <i class="material-icons">arrow_forward</i></button>
-        <a href="#" >Add to Whishlist</a>
+        <button>Add to cart
+          <i class="material-icons">arrow_forward</i>
+        </button>
+        <a href="#">Add to Whishlist</a>
       </div>
-      </div>
-      </div>
-  </main>
+    </div>
+  </div>
+</main>
+
+
+<div class="compose">
+  <a style="color: black">
+    <i class="fas fa-envelope fa-3x" style="color: black"></i>
+    <br>Contact Seller</a>
+</div>
+<div id="modal">
+  <div class="modal_content">
+    <form  [formGroup]="myForm" (ngSubmit)="onSubmit(message)">
+      <textarea placeholder="Type your message here..."  #message  required  formControlName="message" ></textarea>
+      <input class="btn" type="submit" value="Send Message" [disabled]="!myForm.valid || message.value==' '"/>
+    </form>
+  </div>
+</div>

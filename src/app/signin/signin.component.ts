@@ -13,19 +13,14 @@ export class SigninComponent implements OnInit {
 
   myForm: FormGroup;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
       const user = new User(this.myForm.value.email, this.myForm.value.password);
       this.authService.signin(user)
           .subscribe(
               data => {
-                console.log(data["_body"]);
-                console.log(data["_body"]["message"]);
-                
-                //   localStorage.setItem('token', data["token"]);
-                //   localStorage.setItem('userId', data["userId"]);
-                  //this.router.navigateByUrl('/');
+                  this.router.navigateByUrl('');
               },
               error => console.error(error)
           );

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WishlistService } from '../wishlist.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wishlist',
@@ -8,7 +9,7 @@ import { WishlistService } from '../wishlist.service';
 })
 export class WishlistComponent implements OnInit {
   wishlist: object = [];
-  constructor(private wishlistservice: WishlistService) { }
+  constructor( private route: Router,private wishlistservice: WishlistService) { }
 
   ngOnInit() {
     this.wishlistservice.getItem()
@@ -18,6 +19,10 @@ export class WishlistComponent implements OnInit {
         this.wishlist = JSON.parse(data["_body"])
       })
       console.log("yo",this.wishlist);
+  }
+
+  home(){
+    this.route.navigate(['listing']);
   }
 
 }

@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { SigninComponent } from "./signin/signin.component";
 import { DisplaylistingComponent } from "./displaylisting/displaylisting.component";
 import { BookdetailComponent } from "./bookdetail/bookdetail.component";
+import { MessageComponent } from "./message/message.component";
 
 
 const APP_ROUTES: Routes = [
@@ -16,7 +17,8 @@ const APP_ROUTES: Routes = [
         path: '', component: ListingComponent, children: [
             { path: 'listing/add', component: AddlistingComponent },
             { path: 'listing', component: DisplaylistingComponent },
-            { path: 'listing/:id', component: BookdetailComponent }
+            { path: 'listing/:id', component: BookdetailComponent },
+            { path: 'messages', component: MessageComponent }
         ]
     },
     { path: 'listing/:id', component: BookdetailComponent }

@@ -13,7 +13,10 @@ export class ListingComponent implements OnInit {
 
   listings: any[] = [];
 
-  constructor(private router: ActivatedRoute, private route: Router, private listingservice: ListingService, private auth: AuthService) { }
+  constructor(private router: ActivatedRoute, 
+     private route: Router,
+     private listingservice: ListingService, 
+     private auth: AuthService) { }
 
   ngOnInit() {
 
@@ -48,6 +51,10 @@ export class ListingComponent implements OnInit {
       .subscribe(data => {
         this.route.navigate(['']);
       })
+  }
+
+  displayMessage(){
+    this.route.navigate(['messages']);
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListingService } from '../listing.service';
 import { query } from '@angular/core/src/render3/query';
 import { ActivatedRoute, Router } from '@angular/router';
+import { WishlistService } from '../wishlist.service';
 
 @Component({
   selector: 'app-displaylisting',
@@ -15,7 +16,10 @@ export class DisplaylistingComponent implements OnInit {
 
   listings: any[] = [];
 
-  constructor(private listingservice: ListingService,private router: ActivatedRoute, private route: Router) { }
+  constructor(private listingservice: ListingService,
+    private router: ActivatedRoute,
+    private route: Router,
+    private wishlistservice: WishlistService) { }
 
   ngOnInit() {
     this.listingservice.getlisting()
@@ -77,10 +81,19 @@ export class DisplaylistingComponent implements OnInit {
 
   }
 
-  bookdetail(id){
+  bookdetail(id) {
     console.log(id);
-    
+
     this.route.navigate(['listing', id]);
+  }
+
+  addToWishlist(book) {
+    this.wishlistservice.addItem(book)
+      .subscribe(data => {
+        console.log(data);
+
+      })
+
   }
 
 }

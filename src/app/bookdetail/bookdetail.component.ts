@@ -11,7 +11,7 @@ import { MessageService } from '../message.service';
 })
 export class BookdetailComponent implements OnInit {
   myForm: FormGroup;
-  listing;
+  listing:object={};
   constructor(private listingservice: ListingService, private router: ActivatedRoute,private messageService:MessageService) { }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class BookdetailComponent implements OnInit {
   }
 
   onSubmit(message) {
-   this.messageService.sendMessage(this.listing.sellerName,message)
+   this.messageService.sendMessage(this.listing["sellerName"],message)
    .subscribe(data=>{
      console.log(data);
    })

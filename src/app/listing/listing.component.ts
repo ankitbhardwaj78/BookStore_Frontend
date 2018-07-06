@@ -57,4 +57,8 @@ export class ListingComponent implements OnInit {
     this.route.navigate(['messages']);
   }
 
+  wishlistPage(){
+    this.route.navigate(['wishlist']);
+  }
+
 }

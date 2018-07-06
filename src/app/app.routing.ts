@@ -13,9 +13,10 @@ const APP_ROUTES: Routes = [
     { path: 'signin', component: SigninComponent},
     { path: 'signup', component: SignupComponent },
     {
-        path: 'listing', component: ListingComponent, children: [
-            { path: 'add', component: AddlistingComponent },
-            { path: '', component: DisplaylistingComponent }
+        path: '', component: ListingComponent, children: [
+            { path: 'listing/add', component: AddlistingComponent },
+            { path: 'listing', component: DisplaylistingComponent },
+            { path: 'listing/:id', component: BookdetailComponent }
         ]
     },
     { path: 'listing/:id', component: BookdetailComponent }

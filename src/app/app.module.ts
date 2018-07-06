@@ -12,6 +12,7 @@ import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { DisplaylistingComponent } from './displaylisting/displaylisting.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
     AddlistingComponent,
     HomeComponent,
     DisplaylistingComponent,
-    BookdetailComponent
+    BookdetailComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

@@ -35,7 +35,7 @@ export class ListingComponent implements OnInit {
 
   addListingPage() {
     console.log("working");
-    this.route.navigate(['add'], { relativeTo: this.router });
+    this.route.navigate(['listing/add']);
   }
 
   displayListingPage() {

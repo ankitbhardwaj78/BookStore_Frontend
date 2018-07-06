@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { ListingService } from '../listing.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { MessageService } from '../message.service';
+import { WishlistService } from '../wishlist.service';
 
 @Component({
   selector: 'app-bookdetail',
@@ -11,8 +12,11 @@ import { MessageService } from '../message.service';
 })
 export class BookdetailComponent implements OnInit {
   myForm: FormGroup;
-  listing:object={};
-  constructor(private listingservice: ListingService, private router: ActivatedRoute,private messageService:MessageService) { }
+  listing: object = {};
+  constructor(private listingservice: ListingService,
+    private router: ActivatedRoute,
+    private messageService: MessageService,
+    private wishlistservice: WishlistService) { }
 
   ngOnInit() {
     this.router.paramMap.subscribe((params: ParamMap) => {
@@ -29,10 +33,18 @@ export class BookdetailComponent implements OnInit {
   }
 
   onSubmit(message) {
-   this.messageService.sendMessage(this.listing["sellerName"],message)
-   .subscribe(data=>{
-     console.log(data);
-   })
+    this.messageService.sendMessage(this.listing["sellerName"], message)
+      .subscribe(data => {
+        console.log(data);
+      })
+  }
+
+  addToWishlist() {
+    this.wishlistservice.addItem(this.listing)
+      .subscribe(data => {
+        console.log(data);
+      })
+
   }
 
 }

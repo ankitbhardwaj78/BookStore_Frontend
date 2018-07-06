@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { DisplaylistingComponent } from './displaylisting/displaylisting.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { MessageComponent } from './message/message.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MessageComponent } from './message/message.component';
     HomeComponent,
     DisplaylistingComponent,
     BookdetailComponent,
-    MessageComponent
+    MessageComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

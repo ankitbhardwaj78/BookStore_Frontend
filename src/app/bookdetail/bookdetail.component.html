@@ -4,12 +4,9 @@
 
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
-      <a href="">
-        <i class="material-icons">share</i>
-      </a>
       <img data-image="lightblue" src="" alt="">
       <img data-image="darkblue" src="" alt="">
-      <img data-image="green" class="active" src="../../assets/home.webp" alt="">
+      <img data-image="green" class="active" src="http://localhost:3000/{{listing.image}}" alt="" height="100%">
       <img data-image="yellow" src="" alt="">
       <img data-image="purpple" src="" alt="">
     </div>
@@ -21,13 +18,12 @@
       <div class="ratprice">
         <div id="rateYo"></div>
         <div class="product-price">
-          <sup>$</sup>220
+         {{listing.price}} Rs
         </div>
       </div>
       <!-- Product Description -->
       <div class="product-description">
-        <h1>Nike Airmax</h1>
-        <span>Woman's Running Shoes</span>
+        <h1>{{listing.bookname}}</h1><br>
       </div>
 
       <!-- Product Configuration -->
@@ -35,65 +31,21 @@
 
         <!-- Product Color -->
         <div class="product-color">
-          <span>Color</span>
-          <hr>
-          <div class="color-choose">
-            <div>
-              <input data-image="lightblue" type="radio" id="lightblue" name="color" value="lightblue">
-              <label for="lightblue">
-                <span></span>
-              </label>
-            </div>
-            <div>
-              <input data-image="darkblue" type="radio" id="darkblue" name="color" value="darkblue">
-              <label for="darkblue">
-                <span></span>
-              </label>
-            </div>
-            <div>
-              <input data-image="green" type="radio" id="green" name="color" value="green" checked>
-              <label for="green">
-                <span></span>
-              </label>
-            </div>
-            <div>
-              <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow">
-              <label for="yellow">
-                <span></span>
-              </label>
-            </div>
-            <div>
-              <input data-image="purpple" type="radio" id="purpple" name="color" value="purpple">
-              <label for="purpple">
-                <span></span>
-              </label>
-            </div>
-          </div>
+            <span>By</span> <h3 style="color: black">{{listing.authorname}}</h3>
         </div>
 
         <!-- Size Configuration -->
         <div class="size-config">
-          <span>Size</span>
-          <hr>
-          <div class="size">
-            <div class="inc button">
-              <i class="material-icons">add</i>
-            </div>
-            <div id="size-wrapper">
-              <input type="text" name="" id="size" value="7">
-            </div>
-            <div class="dec button">
-              <i class="material-icons">remove</i>
-            </div>
-          </div>
+            <span>Seller</span> <h3 style="color: black">{{listing.userId}}</h3>
+            <span>Condition</span> <h3 style="color: black">{{listing.condition}}</h3>
         </div>
+        
       </div>
+
+      
       <!-- Product Pricing -->
       <div class="buttons">
-        <button>Add to cart
-          <i class="material-icons">arrow_forward</i>
-        </button>
-        <a href="#">Add to Whishlist</a>
+        <button>Add to Wishlist &nbsp; <i class="far fa-hand-point-right fa-2x"></i></button>
       </div>
     </div>
   </div>

@@ -30,4 +30,10 @@ export class ListingService {
     return this.http.post('/api/listings/search',{query});
   }
 
+  singleBookDetail(id){
+    console.log("in" ,'/api/listings/'+ id);
+    
+    return this.http.get('/api/listings/'+ id)
+  }
+
 }

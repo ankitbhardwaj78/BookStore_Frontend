@@ -36,7 +36,7 @@
 
         <!-- Size Configuration -->
         <div class="size-config">
-            <span>Seller</span> <h3 style="color: black">{{listing.userId}}</h3>
+            <span>Seller</span> <h3 style="color: black">{{listing.sellerName}}</h3>
             <span>Condition</span> <h3 style="color: black">{{listing.condition}}</h3>
         </div>
         
@@ -59,7 +59,7 @@
 </div>
 <div id="modal">
   <div class="modal_content">
-    <form  [formGroup]="myForm" (ngSubmit)="onSubmit(message)">
+    <form  [formGroup]="myForm" (ngSubmit)="onSubmit(message.value)">
       <textarea placeholder="Type your message here..."  #message  required  formControlName="message" ></textarea>
       <input class="btn" type="submit" value="Send Message" [disabled]="!myForm.valid || message.value==' '"/>
     </form>

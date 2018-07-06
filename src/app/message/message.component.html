@@ -1,3 +1,11 @@
-<p>
- {{messages | json}}
-</p>
+<div class="wrap">
+        <div class="header"><span>YOUR MESSAGES</span></div>
+          <div class="wrap-list">
+              <ol class="list">
+                 <li *ngFor="let message of messages" style="padding: 10px;">
+                     <h2>{{message.senderName}}</h2><br>
+                     {{message.message}}
+                 </li>
+              </ol>
+          </div>
+      </div>

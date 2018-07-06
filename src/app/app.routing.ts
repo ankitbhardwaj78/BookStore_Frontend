@@ -5,6 +5,7 @@ import { AddlistingComponent } from "./addlisting/addlisting.component";
 import { HomeComponent } from "./home/home.component";
 import { SigninComponent } from "./signin/signin.component";
 import { DisplaylistingComponent } from "./displaylisting/displaylisting.component";
+import { BookdetailComponent } from "./bookdetail/bookdetail.component";
 
 
 const APP_ROUTES: Routes = [
@@ -16,8 +17,8 @@ const APP_ROUTES: Routes = [
             { path: 'add', component: AddlistingComponent },
             { path: '', component: DisplaylistingComponent }
         ]
-    }
-
+    },
+    { path: 'listing/:id', component: BookdetailComponent }
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

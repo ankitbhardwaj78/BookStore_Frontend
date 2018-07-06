@@ -39,6 +39,7 @@ export class ListingComponent implements OnInit {
   }
 
   displayListingPage() {
+
     this.route.navigate(['listing']);
   }
 

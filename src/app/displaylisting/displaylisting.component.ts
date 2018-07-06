@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListingService } from '../listing.service';
 import { query } from '@angular/core/src/render3/query';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-displaylisting',
@@ -14,7 +15,7 @@ export class DisplaylistingComponent implements OnInit {
 
   listings: any[] = [];
 
-  constructor(private listingservice: ListingService) { }
+  constructor(private listingservice: ListingService,private router: ActivatedRoute, private route: Router) { }
 
   ngOnInit() {
     this.listingservice.getlisting()
@@ -74,6 +75,12 @@ export class DisplaylistingComponent implements OnInit {
         this.listings = JSON.parse(data["_body"])
       })
 
+  }
+
+  bookdetail(id){
+    console.log(id);
+    
+    this.route.navigate(['listing', id]);
   }
 
 }

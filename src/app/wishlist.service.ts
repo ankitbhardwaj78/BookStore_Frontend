@@ -16,4 +16,8 @@ export class WishlistService {
     return this.http.get('/api/wishlists');
   }
 
+  removeItem(item){
+    return this.http.post('/api/wishlists/remove',{item});
+  }
+
 }

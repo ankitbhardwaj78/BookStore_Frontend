@@ -22,7 +22,9 @@ export class SigninComponent implements OnInit {
               data => {
                   this.router.navigateByUrl('');
               },
-              error => console.error(error)
+              error => {
+                alert(JSON.parse(error["_body"]).error);
+              }
           );
       this.myForm.reset();
   }

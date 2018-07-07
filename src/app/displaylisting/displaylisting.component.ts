@@ -65,7 +65,7 @@ export class DisplaylistingComponent implements OnInit {
   filterByPrice(from, to) {
     this.listingservice.filterByPrice(from, to)
       .subscribe(data => {
-        console.log(data);
+        console.log(JSON.parse(data["_body"]));
         this.listings = JSON.parse(data["_body"])
       })
   }
@@ -90,9 +90,12 @@ export class DisplaylistingComponent implements OnInit {
   addToWishlist(book) {
     this.wishlistservice.addItem(book)
       .subscribe(data => {
-        console.log(data);
-
-      })
+        alert("Added To Your Wishlist successfully");
+      },
+      error=>{
+        alert("Cannot Be Addded To your wishlist");
+      }
+    )
 
   }
 

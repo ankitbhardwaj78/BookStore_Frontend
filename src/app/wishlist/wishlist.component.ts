@@ -25,4 +25,21 @@ export class WishlistComponent implements OnInit {
     this.route.navigate(['listing']);
   }
 
+  remove(item){
+    this.wishlistservice.removeItem(item)
+    .subscribe(data=>{
+      alert("Item Removed Successfully");
+      this.wishlistservice.getItem()
+      .subscribe(data => {
+        console.log(data);
+        
+        this.wishlist = JSON.parse(data["_body"])
+      })
+    },
+    error=>{
+      alert("Cannot be removed");
+    }
+  )
+  }
+
 }

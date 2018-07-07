@@ -35,15 +35,24 @@ export class BookdetailComponent implements OnInit {
   onSubmit(message) {
     this.messageService.sendMessage(this.listing["sellerName"], message)
       .subscribe(data => {
-        console.log(data);
-      })
+        alert("Message Sent SuccessFully");
+      },
+      error=>{
+        alert("message Cant Be sent");
+      }
+    )
+    this.myForm.reset();
   }
 
   addToWishlist() {
     this.wishlistservice.addItem(this.listing)
       .subscribe(data => {
-        console.log(data);
-      })
+        alert("Added To Your Wishlist successfully");
+      },
+      error=>{
+        alert("cannot be added to your wishlist");
+      }
+    )
 
   }
 

@@ -32,7 +32,10 @@ export class SignupComponent implements OnInit {
           console.log(data); 
           this.router.navigateByUrl('/home/signin');
         },
-        error => console.error(error)
+        error => {
+          alert(JSON.parse(error["_body"]).error[0].message);
+          
+        }
       );
     this.myForm.reset();
   }

@@ -6,7 +6,7 @@
       Back
     </button>
   </div>
-  <h2 *ngIf="wishlist.length < 1">Your cat</h2>
+  <h2 *ngIf="wishlist.length < 1" style="font-weight: bold;font-size: 50px;padding-top: 20px;margin-left: 20px;">Your Wishlist Is Empty</h2>
   <div class="cart" *ngIf="wishlist.length>0">
     <ul class="cartWrap" id="cart_detail">
       <li class="items odd" *ngFor="let item of wishlist">
@@ -21,7 +21,7 @@
             
           </div>
           <div class="cartSection removeWrap">
-              <button class="btn btn-danger" style="border-radius: 20px;">
+              <button class="btn btn-danger" style="border-radius: 20px;" (click)="remove(item)">
                   X
                 </button>
           </div>

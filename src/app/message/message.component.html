@@ -1,7 +1,8 @@
 <div class="wrap">
         <div class="header"><span>YOUR MESSAGES</span></div>
           <div class="wrap-list">
-              <ol class="list">
+                <h2 *ngIf="messages.length < 1" style="font-weight: bold;font-size: 50px;padding-top: 20px;margin-left: 20px;">No Message</h2>
+              <ol class="list"  *ngIf="messages.length > 0">
                  <li *ngFor="let message of messages" style="padding: 10px;">
                      <h2>{{message.senderName}}</h2><br>
                      {{message.message}}

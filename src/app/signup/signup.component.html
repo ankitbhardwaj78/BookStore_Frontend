@@ -1,186 +1,47 @@
-<!-- <div class="col-md-8 col-md-offset-2">
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-          <label for="name">Name</label>
-          <input
-                  type="text"
-                  id="name"
-                  class="form-control"
-                  formControlName="name">
+<div class="main">
+  <div class="container">
+    <div class="signup">
+      <div class="form">
+        <h1>Sign up</h1>
+        <p>Create your account to get free gift cards!
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <label>
+              <input type="text" placeholder="Enter Your Name" class="name" formControlName="name" />
+            </label>
+            <label>
+              <input type="email" placeholder="Enter Your Email" class="email" formControlName="email" />
+            </label>
+            <label>
+              <input type="password" placeholder="Enter Your Password" class="password" formControlName="password" />
+            </label>
+            <label>
+              <input type="text" placeholder="Enter Your college" class="college" formControlName="college" />
+            </label>
+            <label>
+              <input type="text" placeholder="Enter Your Address" class="address" formControlName="address" />
+            </label>
+            <label>
+              <input type="text" placeholder="Enter Your Phone Number" class="phonenumber" formControlName="phoneNumber" />
+            </label>
+            <label>
+              <input type="submit" value="Create Account" [disabled]="!myForm.valid" />
+            </label>
+          </form>
       </div>
-      <div class="form-group">
-          <label for="email">Email</label>
-          <input
-                  type="email"
-                  id="email"
-                  class="form-control"
-                  formControlName="email">
+      <div class="features">
+        <h3>Features</h3>
+        <ul>
+          <li>100% Free Signup </li>
+          <li>Buy Books At cheaper price</li>
+          <li>Sell Your Old Books</li>
+          <li>Contact with the seller</li>
+        </ul>
       </div>
-      <div class="form-group">
-          <label for="password">Password</label>
-          <input
-                  type="password"
-                  id="password"
-                  class="form-control"
-                  formControlName="password">
+
+      <div class="plan">
+        <img src="https://res.cloudinary.com/fazurrehman/image/upload/v1484818922/dailyui/send-msg.png" alt="hi your welcome to sign up! get free gift cards here!"
+        />
       </div>
-      <div class="form-group">
-        <label for="College">College</label>
-        <input
-                type="text"
-                id="college"
-                class="form-control"
-                formControlName="college">
     </div>
-    <div class="form-group">
-      <label for="address">Address</label>
-      <input
-              type="text"
-              id="address"
-              class="form-control"
-              formControlName="address">
-    </div>
-    <div class="form-group">
-      <label for="phoneNumber">Phone Number</label>
-      <input
-              type="text"
-              id="phoneNumber"
-              class="form-control"
-              formControlName="phoneNumber">
-    </div>
-      <button
-              class="btn btn-primary"
-              type="submit"
-              [disabled]="!myForm.valid">Submit</button>
-  </form>
+  </div>
 </div>
- -->
-
-
-
-
-
-
-
- <!-- <div class="signup__container">
-                <div class="container__child signup__thumbnail">
-                  <div class="thumbnail__logo">
-                    <h1 class="logo__text">Spectre</h1>
-                  </div>
-                  <div class="thumbnail__content text-center">
-                    <h1 class="heading--primary">Welcome to MI6.</h1>
-                    <h2 class="heading--secondary">Are you ready to join the elite?</h2>
-                  </div>
-                  <div class="thumbnail__links">
-                   
-                  </div>
-                  <div class="signup__overlay"></div>
-                </div>
-                <div class="container__child signup__form">
-                  <form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
-                                <div class="form-group">
-                                                <label for="name">Name</label>
-                                                <input
-                                                        type="text"
-                                                        id="name"
-                                                        class="form-control"
-                                                        formControlName="name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email">Email</label>
-                                                <input
-                                                        type="email"
-                                                        id="email"
-                                                        class="form-control"
-                                                        formControlName="email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password">Password</label>
-                                                <input
-                                                        type="password"
-                                                        id="password"
-                                                        class="form-control"
-                                                        formControlName="password">
-                                            </div>
-                                            <div class="form-group">
-                                              <label for="College">College</label>
-                                              <input
-                                                      type="text"
-                                                      id="college"
-                                                      class="form-control"
-                                                      formControlName="college">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="address">Address</label>
-                                            <input
-                                                    type="text"
-                                                    id="address"
-                                                    class="form-control"
-                                                    formControlName="address">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="phoneNumber">Phone Number</label>
-                                            <input
-                                                    type="text"
-                                                    id="phoneNumber"
-                                                    class="form-control"
-                                                    formControlName="phoneNumber">
-                                          </div>
-                    <div class="m-t-lg">
-                      <ul class="list-inline">
-                        <li>
-                          <input class="btn btn--form" type="submit" value="Register" [disabled]="!myForm.valid"/>
-                        </li>
-                        <li>
-                          <a class="signup__link" href="#">I am already a member</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </form>  
-                </div>
-              </div> -->
-
-
-
-
-
-
-              <div class="main">
-                <div class="container">
-                  <div class="signup">
-                    <div class="form">
-                      <h1>Sign up</h1>
-                      <p>Create your account to get free gift cards!
-                      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-                        <label><input type="text" placeholder="Enter Your Name" class="name" formControlName="name"/></label>
-                        <label><input type="email" placeholder="Enter Your Email" class="email" formControlName="email"/></label>
-                        <label><input type="password" placeholder="Enter Your Password" class="password" formControlName="password"/></label>
-                        <label><input type="text" placeholder="Enter Your college" class="college" formControlName="college"/></label>
-                        <label><input type="text" placeholder="Enter Your Address" class="address" formControlName="address"/></label>
-                        <label><input type="text" placeholder="Enter Your Phone Number" class="phonenumber" formControlName="phoneNumber"/></label>
-                        <label><input type="submit" value="Create Account"   [disabled]="!myForm.valid"/></label>
-                      </form>
-                    </div>
-                    <div class="features">
-                      <h3>Features</h3>
-                      <ul>
-                        <li>100% Free Signup </li>
-                        <li>Buy Books At cheaper price</li>
-                        <li>Sell Your Old Books</li>
-                        <li>Contact with the seller</li>
-                      </ul>
-                    </div>
-                    
-                    <div class="plan">
-                      <img src="https://res.cloudinary.com/fazurrehman/image/upload/v1484818922/dailyui/send-msg.png" alt="hi your welcome to sign up! get free gift cards here!" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-   
-              
-              
-              
-              
-              

@@ -32,7 +32,6 @@ export class DisplaylistingComponent implements OnInit {
 
   sortbyprice() {
     console.log("in sort");
-
     this.listings.sort(function (x, y) {
       return Number(x.price) - Number(y.price);
     })
@@ -75,7 +74,6 @@ export class DisplaylistingComponent implements OnInit {
     this.listingservice.search(query)
       .subscribe(data => {
         console.log(data);
-
         this.listings = JSON.parse(data["_body"])
       })
 
@@ -83,7 +81,6 @@ export class DisplaylistingComponent implements OnInit {
 
   bookdetail(id) {
     console.log(id);
-
     this.route.navigate(['listing', id]);
   }
 
@@ -96,7 +93,6 @@ export class DisplaylistingComponent implements OnInit {
         alert("Cannot Be Addded To your wishlist");
       }
     )
-
   }
 
 }

@@ -11,12 +11,15 @@ import { WishlistService } from '../wishlist.service';
   styleUrls: ['./bookdetail.component.css']
 })
 export class BookdetailComponent implements OnInit {
+  
   myForm: FormGroup;
   listing: object = {};
+
   constructor(private listingservice: ListingService,
     private router: ActivatedRoute,
     private messageService: MessageService,
     private wishlistservice: WishlistService) { }
+
 
   ngOnInit() {
     this.router.paramMap.subscribe((params: ParamMap) => {
@@ -32,6 +35,7 @@ export class BookdetailComponent implements OnInit {
     });
   }
 
+
   onSubmit(message) {
     this.messageService.sendMessage(this.listing["sellerName"], message)
       .subscribe(data => {
@@ -43,6 +47,7 @@ export class BookdetailComponent implements OnInit {
     )
     this.myForm.reset();
   }
+
 
   addToWishlist() {
     this.wishlistservice.addItem(this.listing)

@@ -40,11 +40,9 @@ export class SigninComponent implements OnInit {
   }
   
   logout(){
-    console.log("in logout");
-    
+    console.log("in logout");  
     this.authService.logout().subscribe(data =>{
-      console.log(data);
-      
+      console.log(data);   
     })
   }
    

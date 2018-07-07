@@ -160,6 +160,11 @@ html, body{
 	z-index: 1
 }
 
+form input[type="submit"]:disabled {
+  background: #dddddd;
+}
+
+
 
 
 

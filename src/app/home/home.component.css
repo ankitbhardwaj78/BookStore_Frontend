@@ -58,6 +58,7 @@ header li a {
 header li a:hover {
   color: #fed136;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .home {

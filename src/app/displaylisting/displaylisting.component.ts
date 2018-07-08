@@ -3,6 +3,7 @@ import { ListingService } from '../listing.service';
 import { query } from '@angular/core/src/render3/query';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WishlistService } from '../wishlist.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-displaylisting',
@@ -19,9 +20,18 @@ export class DisplaylistingComponent implements OnInit {
   constructor(private listingservice: ListingService,
     private router: ActivatedRoute,
     private route: Router,
+    private auth: AuthService,
     private wishlistservice: WishlistService) { }
 
   ngOnInit() {
+    this.auth.isloggedin()
+    .subscribe(data => {
+      if (!JSON.parse(data["_body"]).done) {
+        alert("please login to continue")
+        this.route.navigate(['/home']);
+      }
+    })
+
     this.listingservice.getlisting()
       .subscribe(data => {
         console.log(data["_body"]);
@@ -56,16 +66,24 @@ export class DisplaylistingComponent implements OnInit {
   filterByCondition(condition) {
     this.listingservice.filterByCondition(condition)
       .subscribe(data => {
-        console.log(data);
-        this.listings = JSON.parse(data["_body"])
+        if (JSON.parse(data["_body"]) < 1) {
+          alert("No item found ")
+        }
+        else {
+          this.listings = JSON.parse(data["_body"])
+        }
       })
   }
 
   filterByPrice(from, to) {
     this.listingservice.filterByPrice(from, to)
       .subscribe(data => {
-        console.log(JSON.parse(data["_body"]));
-        this.listings = JSON.parse(data["_body"])
+        if (JSON.parse(data["_body"]) < 1) {
+          alert("No item found for this range")
+        }
+        else {
+          this.listings = JSON.parse(data["_body"])
+        }
       })
   }
 
@@ -74,7 +92,12 @@ export class DisplaylistingComponent implements OnInit {
     this.listingservice.search(query)
       .subscribe(data => {
         console.log(data);
-        this.listings = JSON.parse(data["_body"])
+        if (JSON.parse(data["_body"]) < 1) {
+          alert("Not found")
+        }
+        else {
+          this.listings = JSON.parse(data["_body"])
+        }
       })
 
   }
@@ -89,10 +112,10 @@ export class DisplaylistingComponent implements OnInit {
       .subscribe(data => {
         alert("Added To Your Wishlist successfully");
       },
-      error=>{
-        alert("Cannot Be Addded To your wishlist");
-      }
-    )
+        error => {
+          alert("Cannot Be Addded To your wishlist");
+        }
+      )
   }
 
 }

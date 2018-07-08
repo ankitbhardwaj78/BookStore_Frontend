@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ListingService } from '../listing.service';
 import { Listing } from '../listing.model';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addlisting',
@@ -15,7 +17,8 @@ export class AddlistingComponent implements OnInit {
   fd = new FormData();
 
 
-  constructor(private listingservice: ListingService) { }
+  constructor(private listingservice: ListingService, private route: Router,
+    private auth: AuthService) { }
 
   onSubmit() {
     this.fd.append('bookname',this.myForm.value.bookname)
@@ -37,6 +40,13 @@ export class AddlistingComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.auth.isloggedin()
+    .subscribe(data => {
+      if (!JSON.parse(data["_body"]).done) {
+        alert("please login to continue")
+        this.route.navigate(['/home']);
+      }
+    })
     this.myForm = new FormGroup({
       bookname: new FormControl(null, Validators.required),
       authorname: new FormControl(null, Validators.required),

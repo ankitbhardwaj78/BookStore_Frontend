@@ -8,7 +8,7 @@
     </div>
     <ul class="sideMenu">
       <li>
-        <a href="/listing">
+        <a (click) = "displayListingPage()">
           <span class="fa fa-table"></span>PRODUCT</a>
       </li>
       <li>
@@ -34,7 +34,6 @@
     <!-- BEGIN NAV -->
     <nav class="navTop row">
       <div class="menuIcon fl">
-        <i class="fas fa-bars"></i>
       </div>
       <div class="account fr">
         <div class="name has-submenu">{{currentUser}}

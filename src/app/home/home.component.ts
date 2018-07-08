@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(private router: ActivatedRoute,
-    private route: Router) { }
+    private route: Router,
+    private auth: AuthService) { }
 
   ngOnInit() {
+    this.auth.isloggedin()
+      .subscribe(data => {
+        if (JSON.parse(data["_body"]).done) {
+          this.route.navigate(['/listing']);
+        }
+      })
   }
 
   signup() {

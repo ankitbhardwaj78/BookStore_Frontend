@@ -23,6 +23,7 @@ export class SigninComponent implements OnInit {
                   this.router.navigateByUrl('');
               },
               error => {
+                console.log(JSON.parse(error["_body"]));
                 alert(JSON.parse(error["_body"]).error);
               }
           );

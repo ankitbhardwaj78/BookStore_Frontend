@@ -45,8 +45,7 @@ export class ListingComponent implements OnInit {
   }
 
   displayListingPage() {
-
-    this.route.navigate(['listing']);
+    this.route.navigate(['/home']);
   }
 
   logout() {

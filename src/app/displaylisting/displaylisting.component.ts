@@ -27,7 +27,6 @@ export class DisplaylistingComponent implements OnInit {
     this.auth.isloggedin()
     .subscribe(data => {
       if (!JSON.parse(data["_body"]).done) {
-        alert("please login to continue")
         this.route.navigate(['/home']);
       }
     })

@@ -12,8 +12,8 @@ export class MessageService {
     return this.http.get('/api/messages')
   }
 
-  sendMessage(name,message){
-    return this.http.post('/api/messages',{name,message})
+  sendMessage(name,id,message){
+    return this.http.post('/api/messages',{name,id,message})
   }
 
 }

@@ -60,7 +60,7 @@
   <!-- listing card -->
   <div class="row list" style="background-color: #eaebee;width: 85%;">
     <div class="box-wrapper column" *ngFor="let listing of listings" style="margin-top: 5%;">
-      <img src="https://ankitbookstore.herokuapp.com/{{listing.image}}" alt="rhcp" height="200px" width="100%" />
+      <img src="{{listing.image}}" alt="rhcp" height="200px" width="100%" />
       <div class="box-content">
         <a class="buy" href="javascript:void(0)">
           <span>

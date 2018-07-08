@@ -48,7 +48,7 @@ export class BookdetailComponent implements OnInit {
 
 
   onSubmit(message) {
-    this.messageService.sendMessage(this.listing["sellerName"], message)
+    this.messageService.sendMessage(this.listing["sellerName"], this.listing["userId"],message)
       .subscribe(data => {
         alert("Message Sent SuccessFully");
       },
